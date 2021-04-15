@@ -30,6 +30,9 @@
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket(/*[FromBody]*/ ShoppingCart basket)
         {
+            // TODO: Communicate with Discount.Grpc 
+            // and calculate latest prices of products into shopping cart
+             
             return Ok(await _repository.UpdateBasket(basket));
         }
 
